@@ -53,3 +53,5 @@ kubectl get pods
 
 📈 Escalabilidade (HPA)
 O projeto inclui arquivos de configuração Horizontal Pod Autoscaler (HPA) no diretório /k8s, permitindo que o Kubernetes aumente ou diminua o número de réplicas dos serviços automaticamente com base no consumo de recursos.
+
+LINK DO VÍDEO PITCH NO YOUTUBE: https://youtu.be/HodFMm43HaU?si=cule_tgs3Dm1AApH
