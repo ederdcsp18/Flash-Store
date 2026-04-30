@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pagamentos
-        image: ederdcsp18/flash-pagamentos:latest
+        image: eduratoo/flash-pagamentos
         ports:
         - containerPort: 8000
         resources:

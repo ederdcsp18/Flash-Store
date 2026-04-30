@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pedidos
-        image: ederdcsp18/flash-pedidos:latest
+        image: eduratoo/flash-pedidos
         ports:
         - containerPort: 8000
         resources:

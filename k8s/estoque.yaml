@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: estoque
-        image: ederdcsp18/flash-estoque:latest
+        image: eduratoo/flash-estoque
         ports:
         - containerPort: 8000
         resources:

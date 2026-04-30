@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: flash-gateway
 spec:
-  replicas: 2 # Requisito: Alta Disponibilidade
+  replicas: 2 
   selector:
     matchLabels:
       app: flash-gateway
@@ -14,17 +14,17 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: ederdcsp18/flash-gateway:latest # Imagem que subiremos pro Docker Hub
+        image: eduratoo/flash-gateway
         ports:
         - containerPort: 8000
-        resources: # Requisito: Gerenciamento de Recursos
+        resources:
           requests:
             cpu: "100m"
             memory: "128Mi"
           limits:
             cpu: "200m"
             memory: "256Mi"
-        readinessProbe: # Requisito: Saúde da Aplicação
+        readinessProbe:
           httpGet:
             path: /health
             port: 8000
@@ -42,4 +42,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8000
-  type: LoadBalancer # Expõe o Gateway para a internet
+  type: LoadBalancer
